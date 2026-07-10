@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Variable Swatches</title>
+	<style>
+		:root {
+  --light-teal-01: rgb(229 239 244);
+  --light-teal-02: rgb(166 201 218);
+  --light-teal-03: rgb(111 167 195);
+  --light-teal-04: rgb(42 125 167);
+  --light-teal-05: rgb(31 91 122);
+  --light-blue-01: rgb(232 237 245);
+  --light-blue-02: rgb(204 214 234);
+  --light-blue-03: rgb(154 174 214);
+  --light-blue-04: rgb(61 90 148);
+  --light-blue-05: rgb(21 43 86);
+  --light-violet-01: rgb(235 237 247);
+  --light-violet-02: rgb(205 210 234);
+  --light-violet-03: rgb(169 177 219);
+  --light-violet-04: rgb(85 102 185);
+  --light-violet-05: rgb(36 54 143);
+  --light-red-01: rgb(246 233 235);
+  --light-red-02: rgb(240 220 223);
+  --light-red-03: rgb(208 142 153);
+  --light-red-04: rgb(179 72 90);
+  --light-red-05: rgb(119 30 45);
+  --light-orange-01: rgb(245 236 231);
+  --light-orange-02: rgb(230 206 194);
+  --light-orange-03: rgb(200 148 122);
+  --light-orange-04: rgb(168 85 44);
+  --light-orange-05: rgb(99 50 25);
+  --light-yellow-01: rgb(251 244 223);
+  --light-yellow-02: rgb(244 224 162);
+  --light-yellow-03: rgb(237 209 123);
+  --light-yellow-04: rgb(200 162 50);
+  --light-yellow-05: rgb(122 99 31);
+  --light-green-01: rgb(233 246 238);
+  --light-green-02: rgb(219 240 226);
+  --light-green-03: rgb(146 210 168);
+  --light-green-04: rgb(39 157 79);
+  --light-green-05: rgb(31 124 62);
+  --light-jade-01: rgb(229 245 242);
+  --light-jade-02: rgb(204 234 229);
+  --light-jade-03: rgb(125 201 188);
+  --light-jade-04: rgb(39 153 134);
+  --light-jade-05: rgb(30 121 106);
+  --light-grey-00: rgb(255 255 255);
+  --light-grey-01: rgb(243 245 248);
+  --light-grey-02: rgb(232 236 242);
+  --light-grey-03: rgb(212 219 230);
+  --light-grey-04: rgb(143 155 174);
+  --light-grey-05: rgb(84 96 115);
+  --light-grey-06: rgb(28 32 38);
+  --light-gold-01: rgb(247 237 222);
+  --light-gold-02: rgb(235 210 173);
+  --light-gold-03: rgb(214 165 92);
+  --light-gold-04: rgb(187 131 48);
+  --light-gold-05: rgb(106 74 27);
+  --light-orc-01: rgb(96 108 130);
+  --light-orc-02: rgb(35 38 45);
+  --light-orc-03: rgb(0 0 0);
+  --light-fg-neutral-main: var(--light-grey-06);
+  --light-fg-neutral-secondary: var(--light-grey-05);
+  --light-fg-neutral-tertiary: var(--light-grey-04);
+  --light-fg-neutral-inverse: var(--light-grey-00);
+  --light-fg-neutral-on-dark: var(--light-grey-00);
+  --light-fg-neutral-on-light: var(--light-grey-06);
+  --light-fg-primary: var(--light-teal-04);
+  --light-fg-primary-tint: var(--light-teal-02);
+  --light-fg-primary-shade: var(--light-teal-05);
+  --light-fg-secondary: var(--light-blue-05);
+  --light-fg-secondary-tint: var(--light-blue-03);
+  --light-fg-promotion: var(--light-gold-03);
+  --light-fg-promotion-shade: var(--light-gold-05);
+  --light-fg-orc: var(--light-orc-01);
+  --light-fg-success: var(--light-green-05);
+  --light-fg-success-tint: var(--light-green-04);
+  --light-fg-warning: var(--light-yellow-03);
+  --light-fg-warning-shade: var(--light-yellow-05);
+  --light-fg-critical: var(--light-red-04);
+  --light-bg-neutral-primary: var(--light-grey-00);
+  --light-bg-neutral-secondary: var(--light-grey-01);
+  --light-bg-neutral-tertiary: var(--light-grey-02);
+  --light-bg-elevation-1: var(--light-grey-00);
+  --light-bg-elevation-2: var(--light-grey-00);
+  --light-bg-feature-flat: var(--light-blue-05);
+  --light-bg-shadow: var(--light-grey-05);
+  --light-bg-primary-subtle: var(--light-teal-01);
+  --light-bg-info-subtle: var(--light-blue-01);
+  --light-bg-success-subtle: var(--light-green-01);
+  --light-bg-warning-subtle: var(--light-yellow-01);
+  --light-bg-critical-subtle: var(--light-red-01);
+  --light-bg-promotion-subtle: var(--light-gold-01);
+  --light-bg-elevation-1: var(--light-grey-00);
+  --light-bg-elevation-2: var(--light-grey-00);
+  --light-bg-feature-highlight: var(--light-jade-03);
+  --light-border-promotion: var(--light-gold-03);
+  --light-border-main: var(--light-grey-03);
+  --light-border-active: var(--light-teal-04);
+  --light-border-critical-active: var(--light-red-04);
+  --light-border-info: var(--light-blue-03);
+  --light-border-success: var(--light-green-03);
+  --light-border-warning: var(--light-yellow-03);
+  --light-border-critical: var(--light-red-03);
+  --light-chart-datapoint: var(--light-blue-04);
+  --light-chart-datapoint-feature: var(--light-blue-03);
+  --light-chart-bg-plot: var(--light-grey-03);
+  --light-chart-bg-plot-feature: var(--light-blue-04);
+  --light-chart-datapoint-1: var(--light-blue-04);
+  --light-chart-datapoint-2: var(--light-blue-03);
+  --light-chart-datapoint-3: var(--light-blue-02);
+  --light-chart-datapoint-4: var(--light-blue-05);
+  --dark-teal-01: rgb(13 37 49);
+  --dark-teal-02: rgb(22 64 85);
+  --dark-teal-03: var(--light-teal-04);
+  --dark-teal-04: var(--light-teal-03);
+  --dark-teal-05: var(--light-teal-02);
+  --dark-blue-01: rgb(12 25 49);
+  --dark-blue-02: var(--light-blue-05);
+  --dark-blue-03: var(--light-blue-04);
+  --dark-blue-04: rgb(110 139 196);
+  --dark-blue-05: rgb(183 197 225);
+  --dark-violet-01: rgb(16 25 65);
+  --dark-violet-02: rgb(26 38 102);
+  --dark-violet-03: var(--light-violet-04);
+  --dark-violet-04: rgb(120 133 199);
+  --dark-violet-05: rgb(188 194 227);
+  --dark-red-01: rgb(49 12 19);
+  --dark-red-02: var(--light-red-05);
+  --dark-red-03: var(--light-red-04);
+  --dark-red-04: rgb(196 113 127);
+  --dark-red-05: rgb(218 165 174);
+  --dark-orange-01: rgb(49 25 12);
+  --dark-orange-02: var(--light-orange-05);
+  --dark-orange-03: var(--light-orange-04);
+  --dark-orange-04: rgb(186 122 89);
+  --dark-orange-05: rgb(221 189 173);
+  --dark-yellow-01: rgb(40 36 21);
+  --dark-yellow-02: rgb(71 63 37);
+  --dark-yellow-03: rgb(122 107 63);
+  --dark-yellow-04: rgb(220 194 114);
+  --dark-yellow-05: var(--light-yellow-02);
+  --dark-green-01: rgb(12 49 25);
+  --dark-green-02: rgb(18 73 37);
+  --dark-green-03: var(--light-green-05);
+  --dark-green-04: var(--light-green-04);
+  --dark-green-05: rgb(205 234 214);
+  --dark-jade-01: rgb(12 49 43);
+  --dark-jade-02: rgb(18 71 62);
+  --dark-jade-03: var(--light-jade-05);
+  --dark-jade-04: rgb(66 177 158);
+  --dark-jade-05: rgb(172 221 212);
+  --dark-grey-00: rgb(15 17 21);
+  --dark-grey-01: rgb(26 30 35);
+  --dark-grey-02: rgb(39 44 53);
+  --dark-grey-03: rgb(47 54 65);
+  --dark-grey-04: rgb(94 109 130);
+  --dark-grey-05: var(--light-grey-04);
+  --dark-grey-06: rgb(236 239 244);
+  --dark-gold-01: rgb(54 43 28);
+  --dark-gold-02: var(--light-gold-05);
+  --dark-gold-03: var(--light-gold-04);
+  --dark-gold-04: var(--light-gold-03);
+  --dark-gold-05: var(--light-gold-02);
+  --dark-orc-01: var(--light-orc-03);
+  --dark-orc-02: var(--light-orc-02);
+  --dark-orc-03: var(--light-orc-01);
+  --dark-achromatic-pure-black: var(--light-orc-03);
+  --dark-achromatic-pure-white: var(--light-grey-00);
+  --dark-fg-neutral-main: var(--dark-grey-06);
+  --dark-fg-neutral-secondary: var(--light-grey-04);
+  --dark-fg-neutral-tertiary: var(--dark-grey-04);
+  --dark-fg-neutral-inverse: var(--dark-grey-00);
+  --dark-fg-neutral-on-dark: var(--dark-grey-06);
+  --dark-fg-neutral-on-light: var(--dark-grey-00);
+  --dark-fg-primary: var(--light-teal-03);
+  --dark-fg-primary-tint: var(--light-teal-03);
+  --dark-fg-primary-shade: var(--light-teal-04);
+  --dark-fg-secondary: var(--light-blue-05);
+  --dark-fg-secondary-tint: var(--light-blue-03);
+  --dark-fg-promotion: var(--light-gold-03);
+  --dark-fg-promotion-shade: var(--light-gold-05);
+  --dark-fg-success: var(--light-green-05);
+  --dark-fg-success-tint: var(--light-green-04);
+  --dark-fg-warning: var(--light-yellow-03);
+  --dark-fg-warning-shade: var(--light-yellow-05);
+  --dark-fg-critical: var(--light-red-04);
+  --dark-fg-orc: var(--light-orc-01);
+  --dark-bg-neutral-primary: var(--dark-grey-00);
+  --dark-bg-neutral-secondary: var(--dark-grey-01);
+  --dark-bg-neutral-tertiary: var(--dark-grey-02);
+  --dark-bg-feature-flat: var(--dark-blue-01);
+  --dark-bg-primary-subtle: var(--dark-teal-01);
+  --dark-bg-info-subtle: var(--dark-blue-01);
+  --dark-bg-success-subtle: var(--dark-green-01);
+  --dark-bg-warning-subtle: var(--dark-yellow-01);
+  --dark-bg-critical-subtle: var(--dark-red-01);
+  --dark-bg-shadow: var(--dark-grey-00);
+  --dark-bg-promotion-subtle: var(--dark-gold-01);
+  --dark-bg-feature-highlight: var(--dark-jade-05);
+  --dark-border-main: var(--dark-grey-03);
+  --dark-border-active: var(--light-teal-04);
+  --dark-border-critical-active: var(--light-red-04);
+  --dark-border-info: var(--light-blue-03);
+  --dark-border-success: var(--light-green-03);
+  --dark-border-warning: var(--light-yellow-03);
+  --dark-border-critical: var(--light-red-03);
+  --dark-border-m1-plus: var(--light-gold-03);
+  --dark-chart-datapoint: var(--dark-blue-04);
+  --dark-chart-datapoint-feature: var(--dark-blue-04);
+  --dark-chart-bg-plot: var(--dark-grey-03);
+  --dark-chart-datapoint-1: var(--dark-blue-05);
+  --dark-chart-datapoint-2: var(--dark-blue-04);
+  --dark-chart-datapoint-3: var(--light-blue-04);
+  --dark-chart-datapoint-4: var(--dark-blue-01);
+}
+
+		.swatch-label { position: relative; }
+		.copied-feedback {
+			position: absolute;
+			left: 50%;
+			top: 0;
+			transform: translateX(-50%) translateY(-120%);
+			color: #2e7d32;
+			font-size: 11px;
+			font-weight: bold;
+			background: #c8e6c9;
+			border-radius: 4px;
+			padding: 2px 6px;
+			opacity: 0;
+			pointer-events: none;
+			transition: opacity 0.3s;
+			z-index: 2;
+		}
+		.show-feedback { opacity: 1 !important; }
+	.swatch-label .label-info, .swatch-hex { cursor: pointer; transition: background 0.2s; }
+	.swatch-label .label-info:hover, .swatch-hex:hover { background: #e0e0e0; }
+	.swatch-card.dark .label-info:hover, .swatch-card.dark .swatch-hex:hover { background: #333; }
+		body { font-family: 'Inter Variable', 'Inter', Arial, sans-serif; background: #f7f7f7; }
+        h1{margin:0}
+        h2 {padding:18px 0 8px 0;margin:0 0 12px 0;font-size:18px;border-bottom:3px solid #000;}
+		.swatch-section { margin-bottom: 32px; }
+		.swatch-section.dark { background: #222; color: #fff; border-radius: 12px; padding: 24px 12px; }
+		.swatch-section.light { background: #f7f7f7; color: #222; border-radius: 12px; padding: 24px 12px; }
+		.swatch-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+			gap: 16px;
+			width: 100%;
+		}
+		.swatch-card {
+			background: #fff;
+			border-radius: 8px;
+			box-shadow: 0 2px 8px #0001;
+			display: flex;
+			flex-direction: column;
+			align-items: stretch;
+			gap: 6px;
+			padding-bottom: 8px;
+			min-width: 0;
+			width: 100%;
+		}
+		.swatch-card.dark { background: #222; color: #fff; box-shadow: 0 2px 8px #0008; }
+		.swatch-square {
+			width: 100%;
+			height: 40px;
+			border-radius: 4px 4px 0 0;
+			background: var(--swatch-bg, #eee);
+			cursor: pointer;
+			display: block;
+		}
+	.swatch-label { font-size: 13px; word-break: break-all; text-align:center; }
+	.swatch-label .label-main { font-weight: bold; }
+	.swatch-label .label-info { font-weight: 400; font-family: monospace; font-size: 11px; display: block; }
+	.swatch-hex { font-family: monospace; font-weight: 400; font-size: 11px; }
+	.weights-table { border-collapse: collapse; width: 100%; max-width: 640px; }
+	.weights-table th, .weights-table td { text-align: left; padding: 10px 16px; border-bottom: 1px solid var(--light-border-main, #d4dbe6); }
+	.weights-table th { font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--light-fg-neutral-secondary, #546073); }
+	.weights-table td:nth-child(2) { font-family: monospace; }
+	.weights-table .weight-sample { font-size: 22px; }
+	.weights-table td.ind { text-align: center; white-space: nowrap; }
+	.weights-table td.ind::before {
+		content: '';
+		display: inline-block;
+		width: 18px; height: 18px;
+		vertical-align: middle;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
+	.weights-table td.yes::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='12' fill='%231f7c3e'/%3E%3Cpath d='M6.5 12.5l3.5 3.5 7.5-8' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+	.weights-table td.no::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='12' fill='%23b3485a'/%3E%3Cpath d='M8 8l8 8M16 8l-8 8' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E"); }
+	.weights-table td.ind .note { margin-left: 8px; font-size: 12px; color: var(--light-fg-neutral-secondary, #546073); vertical-align: middle; }
+	.weights-table td.yes{background: var(--light-green-02); }
+	</style>
+</head>
+<body>
+	<h1>CSS Variable Swatches</h1>
+	<script>
+	function copyToClipboard(text, el) {
+		navigator.clipboard.writeText(text).then(() => {
+			showFeedback(el);
+		});
+	}
+	function showFeedback(el) {
+		// Always attach feedback to the .swatch-label container
+		let label = el.classList.contains('swatch-label') ? el : el.closest('.swatch-label');
+		if (!label) return;
+		let feedback = label.querySelector('.copied-feedback');
+		if (!feedback) {
+			feedback = document.createElement('span');
+			feedback.className = 'copied-feedback';
+			feedback.textContent = 'Copied!';
+			label.appendChild(feedback);
+		}
+		feedback.classList.add('show-feedback');
+		setTimeout(() => {
+			feedback.classList.remove('show-feedback');
+		}, 1200);
+	}
+	document.addEventListener('DOMContentLoaded', function() {
+		document.querySelectorAll('.label-info').forEach(function(el) {
+			el.addEventListener('click', function() {
+				copyToClipboard(el.textContent, el);
+			});
+		});
+		document.querySelectorAll('.swatch-hex').forEach(function(el) {
+			el.addEventListener('click', function() {
+				copyToClipboard(el.textContent, el);
+			});
+		});
+		document.querySelectorAll('.swatch-square').forEach(function(swatch) {
+			const label = swatch.parentElement.querySelector('.swatch-label');
+			const hex = label ? label.querySelector('.swatch-hex') : null;
+			if (hex && label) {
+				swatch.setAttribute('title', 'Click to copy HEX');
+				swatch.addEventListener('click', function() {
+					copyToClipboard(hex.textContent, label);
+				});
+			}
+		});
+	});
+	</script>
+	<div class="swatch-section light">
+		<h2>Light Mode Primitives</h2>
+		
+				<div class="swatch-grid" style="margin-bottom:18px;">
+					<div class="swatch-card"><div class="swatch-square" style="background: var(--light-teal-01);"></div><div class="swatch-label"><span class='label-main'>--light-teal-01</span><span class='label-info' title='Click to copy RGB'>rgb(229 239 244)</span><span class='swatch-hex' title='Click to copy HEX'>#e5eff4</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-teal-02);"></div><div class="swatch-label"><span class='label-main'>--light-teal-02</span><span class='label-info' title='Click to copy RGB'>rgb(166 201 218)</span><span class='swatch-hex' title='Click to copy HEX'>#a6c9da</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-teal-03);"></div><div class="swatch-label"><span class='label-main'>--light-teal-03</span><span class='label-info' title='Click to copy RGB'>rgb(111 167 195)</span><span class='swatch-hex' title='Click to copy HEX'>#6fa7c3</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-teal-04);"></div><div class="swatch-label"><span class='label-main'>--light-teal-04</span><span class='label-info' title='Click to copy RGB'>rgb(42 125 167)</span><span class='swatch-hex' title='Click to copy HEX'>#2a7da7</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-teal-05);"></div><div class="swatch-label"><span class='label-main'>--light-teal-05</span><span class='label-info' title='Click to copy RGB'>rgb(31 91 122)</span><span class='swatch-hex' title='Click to copy HEX'>#1f5b7a</span></div></div>
+				</div>
+			
+				<div class="swatch-grid" style="margin-bottom:18px;">
+					<div class="swatch-card"><div class="swatch-square" style="background: var(--light-blue-01);"></div><div class="swatch-label"><span class='label-main'>--light-blue-01</span><span class='label-info' title='Click to copy RGB'>rgb(232 237 245)</span><span class='swatch-hex' title='Click to copy HEX'>#e8edf5</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-blue-02);"></div><div class="swatch-label"><span class='label-main'>--light-blue-02</span><span class='label-info' title='Click to copy RGB'>rgb(204 214 234)</span><span class='swatch-hex' title='Click to copy HEX'>#ccd6ea</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-blue-03);"></div><div class="swatch-label"><span class='label-main'>--light-blue-03</span><span class='label-info' title='Click to copy RGB'>rgb(154 174 214)</span><span class='swatch-hex' title='Click to copy HEX'>#9aaed6</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-blue-04);"></div><div class="swatch-label"><span class='label-main'>--light-blue-04</span><span class='label-info' title='Click to copy RGB'>rgb(61 90 148)</span><span class='swatch-hex' title='Click to copy HEX'>#3d5a94</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-blue-05);"></div><div class="swatch-label"><span class='label-main'>--light-blue-05</span><span class='label-info' title='Click to copy RGB'>rgb(21 43 86)</span><span class='swatch-hex' title='Click to copy HEX'>#152b56</span></div></div>
+				</div>
+			
+				<div class="swatch-grid" style="margin-bottom:18px;">
+					<div class="swatch-card"><div class="swatch-square" style="background: var(--light-violet-01);"></div><div class="swatch-label"><span class='label-main'>--light-violet-01</span><span class='label-info' title='Click to copy RGB'>rgb(235 237 247)</span><span class='swatch-hex' title='Click to copy HEX'>#ebedf7</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-violet-02);"></div><div class="swatch-label"><span class='label-main'>--light-violet-02</span><span class='label-info' title='Click to copy RGB'>rgb(205 210 234)</span><span class='swatch-hex' title='Click to copy HEX'>#cdd2ea</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-violet-03);"></div><div class="swatch-label"><span class='label-main'>--light-violet-03</span><span class='label-info' title='Click to copy RGB'>rgb(169 177 219)</span><span class='swatch-hex' title='Click to copy HEX'>#a9b1db</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-violet-04);"></div><div class="swatch-label"><span class='label-main'>--light-violet-04</span><span class='label-info' title='Click to copy RGB'>rgb(85 102 185)</span><span class='swatch-hex' title='Click to copy HEX'>#5566b9</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-violet-05);"></div><div class="swatch-label"><span class='label-main'>--light-violet-05</span><span class='label-info' title='Click to copy RGB'>rgb(36 54 143)</span><span class='swatch-hex' title='Click to copy HEX'>#24368f</span></div></div>
+				</div>
+			
+				<div class="swatch-grid" style="margin-bottom:18px;">
+					<div class="swatch-card"><div class="swatch-square" style="background: var(--light-red-01);"></div><div class="swatch-label"><span class='label-main'>--light-red-01</span><span class='label-info' title='Click to copy RGB'>rgb(246 233 235)</span><span class='swatch-hex' title='Click to copy HEX'>#f6e9eb</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-red-02);"></div><div class="swatch-label"><span class='label-main'>--light-red-02</span><span class='label-info' title='Click to copy RGB'>rgb(240 220 223)</span><span class='swatch-hex' title='Click to copy HEX'>#f0dcdf</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-red-03);"></div><div class="swatch-label"><span class='label-main'>--light-red-03</span><span class='label-info' title='Click to copy RGB'>rgb(208 142 153)</span><span class='swatch-hex' title='Click to copy HEX'>#d08e99</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-red-04);"></div><div class="swatch-label"><span class='label-main'>--light-red-04</span><span class='label-info' title='Click to copy RGB'>rgb(179 72 90)</span><span class='swatch-hex' title='Click to copy HEX'>#b3485a</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-red-05);"></div><div class="swatch-label"><span class='label-main'>--light-red-05</span><span class='label-info' title='Click to copy RGB'>rgb(119 30 45)</span><span class='swatch-hex' title='Click to copy HEX'>#771e2d</span></div></div>
+				</div>
+			
+				<div class="swatch-grid" style="margin-bottom:18px;">
+					<div class="swatch-card"><div class="swatch-square" style="background: var(--light-orange-01);"></div><div class="swatch-label"><span class='label-main'>--light-orange-01</span><span class='label-info' title='Click to copy RGB'>rgb(245 236 231)</span><span class='swatch-hex' title='Click to copy HEX'>#f5ece7</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-orange-02);"></div><div class="swatch-label"><span class='label-main'>--light-orange-02</span><span class='label-info' title='Click to copy RGB'>rgb(230 206 194)</span><span class='swatch-hex' title='Click to copy HEX'>#e6cec2</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-orange-03);"></div><div class="swatch-label"><span class='label-main'>--light-orange-03</span><span class='label-info' title='Click to copy RGB'>rgb(200 148 122)</span><span class='swatch-hex' title='Click to copy HEX'>#c8947a</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-orange-04);"></div><div class="swatch-label"><span class='label-main'>--light-orange-04</span><span class='label-info' title='Click to copy RGB'>rgb(168 85 44)</span><span class='swatch-hex' title='Click to copy HEX'>#a8552c</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-orange-05);"></div><div class="swatch-label"><span class='label-main'>--light-orange-05</span><span class='label-info' title='Click to copy RGB'>rgb(99 50 25)</span><span class='swatch-hex' title='Click to copy HEX'>#633219</span></div></div>
+				</div>
+			
+				<div class="swatch-grid" style="margin-bottom:18px;">
+					<div class="swatch-card"><div class="swatch-square" style="background: var(--light-yellow-01);"></div><div class="swatch-label"><span class='label-main'>--light-yellow-01</span><span class='label-info' title='Click to copy RGB'>rgb(251 244 223)</span><span class='swatch-hex' title='Click to copy HEX'>#fbf4df</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-yellow-02);"></div><div class="swatch-label"><span class='label-main'>--light-yellow-02</span><span class='label-info' title='Click to copy RGB'>rgb(244 224 162)</span><span class='swatch-hex' title='Click to copy HEX'>#f4e0a2</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-yellow-03);"></div><div class="swatch-label"><span class='label-main'>--light-yellow-03</span><span class='label-info' title='Click to copy RGB'>rgb(237 209 123)</span><span class='swatch-hex' title='Click to copy HEX'>#edd17b</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-yellow-04);"></div><div class="swatch-label"><span class='label-main'>--light-yellow-04</span><span class='label-info' title='Click to copy RGB'>rgb(200 162 50)</span><span class='swatch-hex' title='Click to copy HEX'>#c8a232</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-yellow-05);"></div><div class="swatch-label"><span class='label-main'>--light-yellow-05</span><span class='label-info' title='Click to copy RGB'>rgb(122 99 31)</span><span class='swatch-hex' title='Click to copy HEX'>#7a631f</span></div></div>
+				</div>
+			
+				<div class="swatch-grid" style="margin-bottom:18px;">
+					<div class="swatch-card"><div class="swatch-square" style="background: var(--light-green-01);"></div><div class="swatch-label"><span class='label-main'>--light-green-01</span><span class='label-info' title='Click to copy RGB'>rgb(233 246 238)</span><span class='swatch-hex' title='Click to copy HEX'>#e9f6ee</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-green-02);"></div><div class="swatch-label"><span class='label-main'>--light-green-02</span><span class='label-info' title='Click to copy RGB'>rgb(219 240 226)</span><span class='swatch-hex' title='Click to copy HEX'>#dbf0e2</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-green-03);"></div><div class="swatch-label"><span class='label-main'>--light-green-03</span><span class='label-info' title='Click to copy RGB'>rgb(146 210 168)</span><span class='swatch-hex' title='Click to copy HEX'>#92d2a8</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-green-04);"></div><div class="swatch-label"><span class='label-main'>--light-green-04</span><span class='label-info' title='Click to copy RGB'>rgb(39 157 79)</span><span class='swatch-hex' title='Click to copy HEX'>#279d4f</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-green-05);"></div><div class="swatch-label"><span class='label-main'>--light-green-05</span><span class='label-info' title='Click to copy RGB'>rgb(31 124 62)</span><span class='swatch-hex' title='Click to copy HEX'>#1f7c3e</span></div></div>
+				</div>
+			
+				<div class="swatch-grid" style="margin-bottom:18px;">
+					<div class="swatch-card"><div class="swatch-square" style="background: var(--light-jade-01);"></div><div class="swatch-label"><span class='label-main'>--light-jade-01</span><span class='label-info' title='Click to copy RGB'>rgb(229 245 242)</span><span class='swatch-hex' title='Click to copy HEX'>#e5f5f2</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-jade-02);"></div><div class="swatch-label"><span class='label-main'>--light-jade-02</span><span class='label-info' title='Click to copy RGB'>rgb(204 234 229)</span><span class='swatch-hex' title='Click to copy HEX'>#cceae5</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-jade-03);"></div><div class="swatch-label"><span class='label-main'>--light-jade-03</span><span class='label-info' title='Click to copy RGB'>rgb(125 201 188)</span><span class='swatch-hex' title='Click to copy HEX'>#7dc9bc</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-jade-04);"></div><div class="swatch-label"><span class='label-main'>--light-jade-04</span><span class='label-info' title='Click to copy RGB'>rgb(39 153 134)</span><span class='swatch-hex' title='Click to copy HEX'>#279986</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-jade-05);"></div><div class="swatch-label"><span class='label-main'>--light-jade-05</span><span class='label-info' title='Click to copy RGB'>rgb(30 121 106)</span><span class='swatch-hex' title='Click to copy HEX'>#1e796a</span></div></div>
+				</div>
+			
+				<div class="swatch-grid" style="margin-bottom:18px;">
+					<div class="swatch-card"><div class="swatch-square" style="background: var(--light-grey-00);"></div><div class="swatch-label"><span class='label-main'>--light-grey-00</span><span class='label-info' title='Click to copy RGB'>rgb(255 255 255)</span><span class='swatch-hex' title='Click to copy HEX'>#ffffff</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-grey-01);"></div><div class="swatch-label"><span class='label-main'>--light-grey-01</span><span class='label-info' title='Click to copy RGB'>rgb(243 245 248)</span><span class='swatch-hex' title='Click to copy HEX'>#f3f5f8</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-grey-02);"></div><div class="swatch-label"><span class='label-main'>--light-grey-02</span><span class='label-info' title='Click to copy RGB'>rgb(232 236 242)</span><span class='swatch-hex' title='Click to copy HEX'>#e8ecf2</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-grey-03);"></div><div class="swatch-label"><span class='label-main'>--light-grey-03</span><span class='label-info' title='Click to copy RGB'>rgb(212 219 230)</span><span class='swatch-hex' title='Click to copy HEX'>#d4dbe6</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-grey-04);"></div><div class="swatch-label"><span class='label-main'>--light-grey-04</span><span class='label-info' title='Click to copy RGB'>rgb(143 155 174)</span><span class='swatch-hex' title='Click to copy HEX'>#8f9bae</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-grey-05);"></div><div class="swatch-label"><span class='label-main'>--light-grey-05</span><span class='label-info' title='Click to copy RGB'>rgb(84 96 115)</span><span class='swatch-hex' title='Click to copy HEX'>#546073</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-grey-06);"></div><div class="swatch-label"><span class='label-main'>--light-grey-06</span><span class='label-info' title='Click to copy RGB'>rgb(28 32 38)</span><span class='swatch-hex' title='Click to copy HEX'>#1c2026</span></div></div>
+				</div>
+			
+				<div class="swatch-grid" style="margin-bottom:18px;">
+					<div class="swatch-card"><div class="swatch-square" style="background: var(--light-gold-01);"></div><div class="swatch-label"><span class='label-main'>--light-gold-01</span><span class='label-info' title='Click to copy RGB'>rgb(247 237 222)</span><span class='swatch-hex' title='Click to copy HEX'>#f7edde</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-gold-02);"></div><div class="swatch-label"><span class='label-main'>--light-gold-02</span><span class='label-info' title='Click to copy RGB'>rgb(235 210 173)</span><span class='swatch-hex' title='Click to copy HEX'>#ebd2ad</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-gold-03);"></div><div class="swatch-label"><span class='label-main'>--light-gold-03</span><span class='label-info' title='Click to copy RGB'>rgb(214 165 92)</span><span class='swatch-hex' title='Click to copy HEX'>#d6a55c</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-gold-04);"></div><div class="swatch-label"><span class='label-main'>--light-gold-04</span><span class='label-info' title='Click to copy RGB'>rgb(187 131 48)</span><span class='swatch-hex' title='Click to copy HEX'>#bb8330</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-gold-05);"></div><div class="swatch-label"><span class='label-main'>--light-gold-05</span><span class='label-info' title='Click to copy RGB'>rgb(106 74 27)</span><span class='swatch-hex' title='Click to copy HEX'>#6a4a1b</span></div></div>
+				</div>
+			
+				<div class="swatch-grid" style="margin-bottom:18px;">
+					<div class="swatch-card"><div class="swatch-square" style="background: var(--light-orc-01);"></div><div class="swatch-label"><span class='label-main'>--light-orc-01</span><span class='label-info' title='Click to copy RGB'>rgb(96 108 130)</span><span class='swatch-hex' title='Click to copy HEX'>#606c82</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-orc-02);"></div><div class="swatch-label"><span class='label-main'>--light-orc-02</span><span class='label-info' title='Click to copy RGB'>rgb(35 38 45)</span><span class='swatch-hex' title='Click to copy HEX'>#23262d</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-orc-03);"></div><div class="swatch-label"><span class='label-main'>--light-orc-03</span><span class='label-info' title='Click to copy RGB'>rgb(0 0 0)</span><span class='swatch-hex' title='Click to copy HEX'>#000000</span></div></div>
+				</div>
+			
+		<h2>Light Mode Semantic</h2>
+		<div class="swatch-grid">
+			<div class="swatch-card"><div class="swatch-square" style="background: var(--light-fg-neutral-main);"></div><div class="swatch-label"><span class='label-main'>--light-fg-neutral-main</span><span class='label-info' title='Click to copy value'>var(--light-grey-06)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-fg-neutral-secondary);"></div><div class="swatch-label"><span class='label-main'>--light-fg-neutral-secondary</span><span class='label-info' title='Click to copy value'>var(--light-grey-05)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-fg-neutral-tertiary);"></div><div class="swatch-label"><span class='label-main'>--light-fg-neutral-tertiary</span><span class='label-info' title='Click to copy value'>var(--light-grey-04)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-fg-neutral-inverse);"></div><div class="swatch-label"><span class='label-main'>--light-fg-neutral-inverse</span><span class='label-info' title='Click to copy value'>var(--light-grey-00)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-fg-neutral-on-dark);"></div><div class="swatch-label"><span class='label-main'>--light-fg-neutral-on-dark</span><span class='label-info' title='Click to copy value'>var(--light-grey-00)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-fg-neutral-on-light);"></div><div class="swatch-label"><span class='label-main'>--light-fg-neutral-on-light</span><span class='label-info' title='Click to copy value'>var(--light-grey-06)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-fg-primary);"></div><div class="swatch-label"><span class='label-main'>--light-fg-primary</span><span class='label-info' title='Click to copy value'>var(--light-teal-04)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-fg-primary-tint);"></div><div class="swatch-label"><span class='label-main'>--light-fg-primary-tint</span><span class='label-info' title='Click to copy value'>var(--light-teal-02)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-fg-primary-shade);"></div><div class="swatch-label"><span class='label-main'>--light-fg-primary-shade</span><span class='label-info' title='Click to copy value'>var(--light-teal-05)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-fg-secondary);"></div><div class="swatch-label"><span class='label-main'>--light-fg-secondary</span><span class='label-info' title='Click to copy value'>var(--light-blue-05)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-fg-secondary-tint);"></div><div class="swatch-label"><span class='label-main'>--light-fg-secondary-tint</span><span class='label-info' title='Click to copy value'>var(--light-blue-03)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-fg-promotion);"></div><div class="swatch-label"><span class='label-main'>--light-fg-promotion</span><span class='label-info' title='Click to copy value'>var(--light-gold-03)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-fg-promotion-shade);"></div><div class="swatch-label"><span class='label-main'>--light-fg-promotion-shade</span><span class='label-info' title='Click to copy value'>var(--light-gold-05)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-fg-orc);"></div><div class="swatch-label"><span class='label-main'>--light-fg-orc</span><span class='label-info' title='Click to copy value'>var(--light-orc-01)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-fg-success);"></div><div class="swatch-label"><span class='label-main'>--light-fg-success</span><span class='label-info' title='Click to copy value'>var(--light-green-05)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-fg-success-tint);"></div><div class="swatch-label"><span class='label-main'>--light-fg-success-tint</span><span class='label-info' title='Click to copy value'>var(--light-green-04)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-fg-warning);"></div><div class="swatch-label"><span class='label-main'>--light-fg-warning</span><span class='label-info' title='Click to copy value'>var(--light-yellow-03)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-fg-warning-shade);"></div><div class="swatch-label"><span class='label-main'>--light-fg-warning-shade</span><span class='label-info' title='Click to copy value'>var(--light-yellow-05)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-fg-critical);"></div><div class="swatch-label"><span class='label-main'>--light-fg-critical</span><span class='label-info' title='Click to copy value'>var(--light-red-04)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-bg-neutral-primary);"></div><div class="swatch-label"><span class='label-main'>--light-bg-neutral-primary</span><span class='label-info' title='Click to copy value'>var(--light-grey-00)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-bg-neutral-secondary);"></div><div class="swatch-label"><span class='label-main'>--light-bg-neutral-secondary</span><span class='label-info' title='Click to copy value'>var(--light-grey-01)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-bg-neutral-tertiary);"></div><div class="swatch-label"><span class='label-main'>--light-bg-neutral-tertiary</span><span class='label-info' title='Click to copy value'>var(--light-grey-02)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-bg-elevation-1);"></div><div class="swatch-label"><span class='label-main'>--light-bg-elevation-1</span><span class='label-info' title='Click to copy value'>var(--light-grey-00)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-bg-elevation-2);"></div><div class="swatch-label"><span class='label-main'>--light-bg-elevation-2</span><span class='label-info' title='Click to copy value'>var(--light-grey-00)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-bg-feature-flat);"></div><div class="swatch-label"><span class='label-main'>--light-bg-feature-flat</span><span class='label-info' title='Click to copy value'>var(--light-blue-05)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-bg-shadow);"></div><div class="swatch-label"><span class='label-main'>--light-bg-shadow</span><span class='label-info' title='Click to copy value'>var(--light-grey-05)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-bg-primary-subtle);"></div><div class="swatch-label"><span class='label-main'>--light-bg-primary-subtle</span><span class='label-info' title='Click to copy value'>var(--light-teal-01)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-bg-info-subtle);"></div><div class="swatch-label"><span class='label-main'>--light-bg-info-subtle</span><span class='label-info' title='Click to copy value'>var(--light-blue-01)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-bg-success-subtle);"></div><div class="swatch-label"><span class='label-main'>--light-bg-success-subtle</span><span class='label-info' title='Click to copy value'>var(--light-green-01)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-bg-warning-subtle);"></div><div class="swatch-label"><span class='label-main'>--light-bg-warning-subtle</span><span class='label-info' title='Click to copy value'>var(--light-yellow-01)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-bg-critical-subtle);"></div><div class="swatch-label"><span class='label-main'>--light-bg-critical-subtle</span><span class='label-info' title='Click to copy value'>var(--light-red-01)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-bg-promotion-subtle);"></div><div class="swatch-label"><span class='label-main'>--light-bg-promotion-subtle</span><span class='label-info' title='Click to copy value'>var(--light-gold-01)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-bg-elevation-1);"></div><div class="swatch-label"><span class='label-main'>--light-bg-elevation-1</span><span class='label-info' title='Click to copy value'>var(--light-grey-00)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-bg-elevation-2);"></div><div class="swatch-label"><span class='label-main'>--light-bg-elevation-2</span><span class='label-info' title='Click to copy value'>var(--light-grey-00)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-bg-feature-highlight);"></div><div class="swatch-label"><span class='label-main'>--light-bg-feature-highlight</span><span class='label-info' title='Click to copy value'>var(--light-jade-03)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-border-promotion);"></div><div class="swatch-label"><span class='label-main'>--light-border-promotion</span><span class='label-info' title='Click to copy value'>var(--light-gold-03)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-border-main);"></div><div class="swatch-label"><span class='label-main'>--light-border-main</span><span class='label-info' title='Click to copy value'>var(--light-grey-03)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-border-active);"></div><div class="swatch-label"><span class='label-main'>--light-border-active</span><span class='label-info' title='Click to copy value'>var(--light-teal-04)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-border-critical-active);"></div><div class="swatch-label"><span class='label-main'>--light-border-critical-active</span><span class='label-info' title='Click to copy value'>var(--light-red-04)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-border-info);"></div><div class="swatch-label"><span class='label-main'>--light-border-info</span><span class='label-info' title='Click to copy value'>var(--light-blue-03)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-border-success);"></div><div class="swatch-label"><span class='label-main'>--light-border-success</span><span class='label-info' title='Click to copy value'>var(--light-green-03)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-border-warning);"></div><div class="swatch-label"><span class='label-main'>--light-border-warning</span><span class='label-info' title='Click to copy value'>var(--light-yellow-03)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-border-critical);"></div><div class="swatch-label"><span class='label-main'>--light-border-critical</span><span class='label-info' title='Click to copy value'>var(--light-red-03)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-chart-datapoint);"></div><div class="swatch-label"><span class='label-main'>--light-chart-datapoint</span><span class='label-info' title='Click to copy value'>var(--light-blue-04)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-chart-datapoint-feature);"></div><div class="swatch-label"><span class='label-main'>--light-chart-datapoint-feature</span><span class='label-info' title='Click to copy value'>var(--light-blue-03)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-chart-bg-plot);"></div><div class="swatch-label"><span class='label-main'>--light-chart-bg-plot</span><span class='label-info' title='Click to copy value'>var(--light-grey-03)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-chart-bg-plot-feature);"></div><div class="swatch-label"><span class='label-main'>--light-chart-bg-plot-feature</span><span class='label-info' title='Click to copy value'>var(--light-blue-04)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-chart-datapoint-1);"></div><div class="swatch-label"><span class='label-main'>--light-chart-datapoint-1</span><span class='label-info' title='Click to copy value'>var(--light-blue-04)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-chart-datapoint-2);"></div><div class="swatch-label"><span class='label-main'>--light-chart-datapoint-2</span><span class='label-info' title='Click to copy value'>var(--light-blue-03)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-chart-datapoint-3);"></div><div class="swatch-label"><span class='label-main'>--light-chart-datapoint-3</span><span class='label-info' title='Click to copy value'>var(--light-blue-02)</span></div></div><div class="swatch-card"><div class="swatch-square" style="background: var(--light-chart-datapoint-4);"></div><div class="swatch-label"><span class='label-main'>--light-chart-datapoint-4</span><span class='label-info' title='Click to copy value'>var(--light-blue-05)</span></div></div>
+		</div>
+	</div>
+	<div class="swatch-section dark">
+		<h2>Dark Mode Primitives</h2>
+		
+				<div class="swatch-grid" style="margin-bottom:18px;">
+					<div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-teal-01);"></div><div class="swatch-label"><span class='label-main'>--dark-teal-01</span><span class='label-info' title='Click to copy RGB'>rgb(13 37 49)</span><span class='swatch-hex' title='Click to copy HEX'>#0d2531</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-teal-02);"></div><div class="swatch-label"><span class='label-main'>--dark-teal-02</span><span class='label-info' title='Click to copy RGB'>rgb(22 64 85)</span><span class='swatch-hex' title='Click to copy HEX'>#164055</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-teal-03);"></div><div class="swatch-label"><span class='label-main'>--dark-teal-03</span><span class='label-info' title='Click to copy RGB'>var(--light-teal-04)</span><span class='swatch-hex' title='Click to copy HEX'></span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-teal-04);"></div><div class="swatch-label"><span class='label-main'>--dark-teal-04</span><span class='label-info' title='Click to copy RGB'>var(--light-teal-03)</span><span class='swatch-hex' title='Click to copy HEX'></span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-teal-05);"></div><div class="swatch-label"><span class='label-main'>--dark-teal-05</span><span class='label-info' title='Click to copy RGB'>var(--light-teal-02)</span><span class='swatch-hex' title='Click to copy HEX'></span></div></div>
+				</div>
+			
+				<div class="swatch-grid" style="margin-bottom:18px;">
+					<div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-blue-01);"></div><div class="swatch-label"><span class='label-main'>--dark-blue-01</span><span class='label-info' title='Click to copy RGB'>rgb(12 25 49)</span><span class='swatch-hex' title='Click to copy HEX'>#0c1931</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-blue-02);"></div><div class="swatch-label"><span class='label-main'>--dark-blue-02</span><span class='label-info' title='Click to copy RGB'>var(--light-blue-05)</span><span class='swatch-hex' title='Click to copy HEX'></span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-blue-03);"></div><div class="swatch-label"><span class='label-main'>--dark-blue-03</span><span class='label-info' title='Click to copy RGB'>var(--light-blue-04)</span><span class='swatch-hex' title='Click to copy HEX'></span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-blue-04);"></div><div class="swatch-label"><span class='label-main'>--dark-blue-04</span><span class='label-info' title='Click to copy RGB'>rgb(110 139 196)</span><span class='swatch-hex' title='Click to copy HEX'>#6e8bc4</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-blue-05);"></div><div class="swatch-label"><span class='label-main'>--dark-blue-05</span><span class='label-info' title='Click to copy RGB'>rgb(183 197 225)</span><span class='swatch-hex' title='Click to copy HEX'>#b7c5e1</span></div></div>
+				</div>
+			
+				<div class="swatch-grid" style="margin-bottom:18px;">
+					<div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-violet-01);"></div><div class="swatch-label"><span class='label-main'>--dark-violet-01</span><span class='label-info' title='Click to copy RGB'>rgb(16 25 65)</span><span class='swatch-hex' title='Click to copy HEX'>#101941</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-violet-02);"></div><div class="swatch-label"><span class='label-main'>--dark-violet-02</span><span class='label-info' title='Click to copy RGB'>rgb(26 38 102)</span><span class='swatch-hex' title='Click to copy HEX'>#1a2666</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-violet-03);"></div><div class="swatch-label"><span class='label-main'>--dark-violet-03</span><span class='label-info' title='Click to copy RGB'>var(--light-violet-04)</span><span class='swatch-hex' title='Click to copy HEX'></span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-violet-04);"></div><div class="swatch-label"><span class='label-main'>--dark-violet-04</span><span class='label-info' title='Click to copy RGB'>rgb(120 133 199)</span><span class='swatch-hex' title='Click to copy HEX'>#7885c7</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-violet-05);"></div><div class="swatch-label"><span class='label-main'>--dark-violet-05</span><span class='label-info' title='Click to copy RGB'>rgb(188 194 227)</span><span class='swatch-hex' title='Click to copy HEX'>#bcc2e3</span></div></div>
+				</div>
+			
+				<div class="swatch-grid" style="margin-bottom:18px;">
+					<div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-red-01);"></div><div class="swatch-label"><span class='label-main'>--dark-red-01</span><span class='label-info' title='Click to copy RGB'>rgb(49 12 19)</span><span class='swatch-hex' title='Click to copy HEX'>#310c13</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-red-02);"></div><div class="swatch-label"><span class='label-main'>--dark-red-02</span><span class='label-info' title='Click to copy RGB'>var(--light-red-05)</span><span class='swatch-hex' title='Click to copy HEX'></span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-red-03);"></div><div class="swatch-label"><span class='label-main'>--dark-red-03</span><span class='label-info' title='Click to copy RGB'>var(--light-red-04)</span><span class='swatch-hex' title='Click to copy HEX'></span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-red-04);"></div><div class="swatch-label"><span class='label-main'>--dark-red-04</span><span class='label-info' title='Click to copy RGB'>rgb(196 113 127)</span><span class='swatch-hex' title='Click to copy HEX'>#c4717f</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-red-05);"></div><div class="swatch-label"><span class='label-main'>--dark-red-05</span><span class='label-info' title='Click to copy RGB'>rgb(218 165 174)</span><span class='swatch-hex' title='Click to copy HEX'>#daa5ae</span></div></div>
+				</div>
+			
+				<div class="swatch-grid" style="margin-bottom:18px;">
+					<div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-orange-01);"></div><div class="swatch-label"><span class='label-main'>--dark-orange-01</span><span class='label-info' title='Click to copy RGB'>rgb(49 25 12)</span><span class='swatch-hex' title='Click to copy HEX'>#31190c</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-orange-02);"></div><div class="swatch-label"><span class='label-main'>--dark-orange-02</span><span class='label-info' title='Click to copy RGB'>var(--light-orange-05)</span><span class='swatch-hex' title='Click to copy HEX'></span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-orange-03);"></div><div class="swatch-label"><span class='label-main'>--dark-orange-03</span><span class='label-info' title='Click to copy RGB'>var(--light-orange-04)</span><span class='swatch-hex' title='Click to copy HEX'></span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-orange-04);"></div><div class="swatch-label"><span class='label-main'>--dark-orange-04</span><span class='label-info' title='Click to copy RGB'>rgb(186 122 89)</span><span class='swatch-hex' title='Click to copy HEX'>#ba7a59</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-orange-05);"></div><div class="swatch-label"><span class='label-main'>--dark-orange-05</span><span class='label-info' title='Click to copy RGB'>rgb(221 189 173)</span><span class='swatch-hex' title='Click to copy HEX'>#ddbdad</span></div></div>
+				</div>
+			
+				<div class="swatch-grid" style="margin-bottom:18px;">
+					<div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-yellow-01);"></div><div class="swatch-label"><span class='label-main'>--dark-yellow-01</span><span class='label-info' title='Click to copy RGB'>rgb(40 36 21)</span><span class='swatch-hex' title='Click to copy HEX'>#282415</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-yellow-02);"></div><div class="swatch-label"><span class='label-main'>--dark-yellow-02</span><span class='label-info' title='Click to copy RGB'>rgb(71 63 37)</span><span class='swatch-hex' title='Click to copy HEX'>#473f25</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-yellow-03);"></div><div class="swatch-label"><span class='label-main'>--dark-yellow-03</span><span class='label-info' title='Click to copy RGB'>rgb(122 107 63)</span><span class='swatch-hex' title='Click to copy HEX'>#7a6b3f</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-yellow-04);"></div><div class="swatch-label"><span class='label-main'>--dark-yellow-04</span><span class='label-info' title='Click to copy RGB'>rgb(220 194 114)</span><span class='swatch-hex' title='Click to copy HEX'>#dcc272</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-yellow-05);"></div><div class="swatch-label"><span class='label-main'>--dark-yellow-05</span><span class='label-info' title='Click to copy RGB'>var(--light-yellow-02)</span><span class='swatch-hex' title='Click to copy HEX'></span></div></div>
+				</div>
+			
+				<div class="swatch-grid" style="margin-bottom:18px;">
+					<div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-green-01);"></div><div class="swatch-label"><span class='label-main'>--dark-green-01</span><span class='label-info' title='Click to copy RGB'>rgb(12 49 25)</span><span class='swatch-hex' title='Click to copy HEX'>#0c3119</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-green-02);"></div><div class="swatch-label"><span class='label-main'>--dark-green-02</span><span class='label-info' title='Click to copy RGB'>rgb(18 73 37)</span><span class='swatch-hex' title='Click to copy HEX'>#124925</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-green-03);"></div><div class="swatch-label"><span class='label-main'>--dark-green-03</span><span class='label-info' title='Click to copy RGB'>var(--light-green-05)</span><span class='swatch-hex' title='Click to copy HEX'></span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-green-04);"></div><div class="swatch-label"><span class='label-main'>--dark-green-04</span><span class='label-info' title='Click to copy RGB'>var(--light-green-04)</span><span class='swatch-hex' title='Click to copy HEX'></span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-green-05);"></div><div class="swatch-label"><span class='label-main'>--dark-green-05</span><span class='label-info' title='Click to copy RGB'>rgb(205 234 214)</span><span class='swatch-hex' title='Click to copy HEX'>#cdead6</span></div></div>
+				</div>
+			
+				<div class="swatch-grid" style="margin-bottom:18px;">
+					<div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-jade-01);"></div><div class="swatch-label"><span class='label-main'>--dark-jade-01</span><span class='label-info' title='Click to copy RGB'>rgb(12 49 43)</span><span class='swatch-hex' title='Click to copy HEX'>#0c312b</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-jade-02);"></div><div class="swatch-label"><span class='label-main'>--dark-jade-02</span><span class='label-info' title='Click to copy RGB'>rgb(18 71 62)</span><span class='swatch-hex' title='Click to copy HEX'>#12473e</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-jade-03);"></div><div class="swatch-label"><span class='label-main'>--dark-jade-03</span><span class='label-info' title='Click to copy RGB'>var(--light-jade-05)</span><span class='swatch-hex' title='Click to copy HEX'></span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-jade-04);"></div><div class="swatch-label"><span class='label-main'>--dark-jade-04</span><span class='label-info' title='Click to copy RGB'>rgb(66 177 158)</span><span class='swatch-hex' title='Click to copy HEX'>#42b19e</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-jade-05);"></div><div class="swatch-label"><span class='label-main'>--dark-jade-05</span><span class='label-info' title='Click to copy RGB'>rgb(172 221 212)</span><span class='swatch-hex' title='Click to copy HEX'>#acddd4</span></div></div>
+				</div>
+			
+				<div class="swatch-grid" style="margin-bottom:18px;">
+					<div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-grey-00);"></div><div class="swatch-label"><span class='label-main'>--dark-grey-00</span><span class='label-info' title='Click to copy RGB'>rgb(15 17 21)</span><span class='swatch-hex' title='Click to copy HEX'>#0f1115</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-grey-01);"></div><div class="swatch-label"><span class='label-main'>--dark-grey-01</span><span class='label-info' title='Click to copy RGB'>rgb(26 30 35)</span><span class='swatch-hex' title='Click to copy HEX'>#1a1e23</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-grey-02);"></div><div class="swatch-label"><span class='label-main'>--dark-grey-02</span><span class='label-info' title='Click to copy RGB'>rgb(39 44 53)</span><span class='swatch-hex' title='Click to copy HEX'>#272c35</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-grey-03);"></div><div class="swatch-label"><span class='label-main'>--dark-grey-03</span><span class='label-info' title='Click to copy RGB'>rgb(47 54 65)</span><span class='swatch-hex' title='Click to copy HEX'>#2f3641</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-grey-04);"></div><div class="swatch-label"><span class='label-main'>--dark-grey-04</span><span class='label-info' title='Click to copy RGB'>rgb(94 109 130)</span><span class='swatch-hex' title='Click to copy HEX'>#5e6d82</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-grey-05);"></div><div class="swatch-label"><span class='label-main'>--dark-grey-05</span><span class='label-info' title='Click to copy RGB'>var(--light-grey-04)</span><span class='swatch-hex' title='Click to copy HEX'></span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-grey-06);"></div><div class="swatch-label"><span class='label-main'>--dark-grey-06</span><span class='label-info' title='Click to copy RGB'>rgb(236 239 244)</span><span class='swatch-hex' title='Click to copy HEX'>#eceff4</span></div></div>
+				</div>
+			
+				<div class="swatch-grid" style="margin-bottom:18px;">
+					<div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-gold-01);"></div><div class="swatch-label"><span class='label-main'>--dark-gold-01</span><span class='label-info' title='Click to copy RGB'>rgb(54 43 28)</span><span class='swatch-hex' title='Click to copy HEX'>#362b1c</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-gold-02);"></div><div class="swatch-label"><span class='label-main'>--dark-gold-02</span><span class='label-info' title='Click to copy RGB'>var(--light-gold-05)</span><span class='swatch-hex' title='Click to copy HEX'></span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-gold-03);"></div><div class="swatch-label"><span class='label-main'>--dark-gold-03</span><span class='label-info' title='Click to copy RGB'>var(--light-gold-04)</span><span class='swatch-hex' title='Click to copy HEX'></span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-gold-04);"></div><div class="swatch-label"><span class='label-main'>--dark-gold-04</span><span class='label-info' title='Click to copy RGB'>var(--light-gold-03)</span><span class='swatch-hex' title='Click to copy HEX'></span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-gold-05);"></div><div class="swatch-label"><span class='label-main'>--dark-gold-05</span><span class='label-info' title='Click to copy RGB'>var(--light-gold-02)</span><span class='swatch-hex' title='Click to copy HEX'></span></div></div>
+				</div>
+			
+				<div class="swatch-grid" style="margin-bottom:18px;">
+					<div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-orc-01);"></div><div class="swatch-label"><span class='label-main'>--dark-orc-01</span><span class='label-info' title='Click to copy RGB'>var(--light-orc-03)</span><span class='swatch-hex' title='Click to copy HEX'></span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-orc-02);"></div><div class="swatch-label"><span class='label-main'>--dark-orc-02</span><span class='label-info' title='Click to copy RGB'>var(--light-orc-02)</span><span class='swatch-hex' title='Click to copy HEX'></span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-orc-03);"></div><div class="swatch-label"><span class='label-main'>--dark-orc-03</span><span class='label-info' title='Click to copy RGB'>var(--light-orc-01)</span><span class='swatch-hex' title='Click to copy HEX'></span></div></div>
+				</div>
+			
+		<h2>Dark Mode Semantic</h2>
+		<div class="swatch-grid">
+			<div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-teal-03);"></div><div class="swatch-label"><span class='label-main'>--dark-teal-03</span><span class='label-info' title='Click to copy value'>var(--light-teal-04)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-teal-04);"></div><div class="swatch-label"><span class='label-main'>--dark-teal-04</span><span class='label-info' title='Click to copy value'>var(--light-teal-03)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-teal-05);"></div><div class="swatch-label"><span class='label-main'>--dark-teal-05</span><span class='label-info' title='Click to copy value'>var(--light-teal-02)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-blue-02);"></div><div class="swatch-label"><span class='label-main'>--dark-blue-02</span><span class='label-info' title='Click to copy value'>var(--light-blue-05)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-blue-03);"></div><div class="swatch-label"><span class='label-main'>--dark-blue-03</span><span class='label-info' title='Click to copy value'>var(--light-blue-04)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-violet-03);"></div><div class="swatch-label"><span class='label-main'>--dark-violet-03</span><span class='label-info' title='Click to copy value'>var(--light-violet-04)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-red-02);"></div><div class="swatch-label"><span class='label-main'>--dark-red-02</span><span class='label-info' title='Click to copy value'>var(--light-red-05)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-red-03);"></div><div class="swatch-label"><span class='label-main'>--dark-red-03</span><span class='label-info' title='Click to copy value'>var(--light-red-04)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-orange-02);"></div><div class="swatch-label"><span class='label-main'>--dark-orange-02</span><span class='label-info' title='Click to copy value'>var(--light-orange-05)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-orange-03);"></div><div class="swatch-label"><span class='label-main'>--dark-orange-03</span><span class='label-info' title='Click to copy value'>var(--light-orange-04)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-yellow-05);"></div><div class="swatch-label"><span class='label-main'>--dark-yellow-05</span><span class='label-info' title='Click to copy value'>var(--light-yellow-02)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-green-03);"></div><div class="swatch-label"><span class='label-main'>--dark-green-03</span><span class='label-info' title='Click to copy value'>var(--light-green-05)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-green-04);"></div><div class="swatch-label"><span class='label-main'>--dark-green-04</span><span class='label-info' title='Click to copy value'>var(--light-green-04)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-jade-03);"></div><div class="swatch-label"><span class='label-main'>--dark-jade-03</span><span class='label-info' title='Click to copy value'>var(--light-jade-05)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-grey-05);"></div><div class="swatch-label"><span class='label-main'>--dark-grey-05</span><span class='label-info' title='Click to copy value'>var(--light-grey-04)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-gold-02);"></div><div class="swatch-label"><span class='label-main'>--dark-gold-02</span><span class='label-info' title='Click to copy value'>var(--light-gold-05)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-gold-03);"></div><div class="swatch-label"><span class='label-main'>--dark-gold-03</span><span class='label-info' title='Click to copy value'>var(--light-gold-04)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-gold-04);"></div><div class="swatch-label"><span class='label-main'>--dark-gold-04</span><span class='label-info' title='Click to copy value'>var(--light-gold-03)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-gold-05);"></div><div class="swatch-label"><span class='label-main'>--dark-gold-05</span><span class='label-info' title='Click to copy value'>var(--light-gold-02)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-orc-01);"></div><div class="swatch-label"><span class='label-main'>--dark-orc-01</span><span class='label-info' title='Click to copy value'>var(--light-orc-03)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-orc-02);"></div><div class="swatch-label"><span class='label-main'>--dark-orc-02</span><span class='label-info' title='Click to copy value'>var(--light-orc-02)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-orc-03);"></div><div class="swatch-label"><span class='label-main'>--dark-orc-03</span><span class='label-info' title='Click to copy value'>var(--light-orc-01)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-achromatic-pure-black);"></div><div class="swatch-label"><span class='label-main'>--dark-achromatic-pure-black</span><span class='label-info' title='Click to copy value'>var(--light-orc-03)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-achromatic-pure-white);"></div><div class="swatch-label"><span class='label-main'>--dark-achromatic-pure-white</span><span class='label-info' title='Click to copy value'>var(--light-grey-00)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-fg-neutral-main);"></div><div class="swatch-label"><span class='label-main'>--dark-fg-neutral-main</span><span class='label-info' title='Click to copy value'>var(--dark-grey-06)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-fg-neutral-secondary);"></div><div class="swatch-label"><span class='label-main'>--dark-fg-neutral-secondary</span><span class='label-info' title='Click to copy value'>var(--light-grey-04)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-fg-neutral-tertiary);"></div><div class="swatch-label"><span class='label-main'>--dark-fg-neutral-tertiary</span><span class='label-info' title='Click to copy value'>var(--dark-grey-04)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-fg-neutral-inverse);"></div><div class="swatch-label"><span class='label-main'>--dark-fg-neutral-inverse</span><span class='label-info' title='Click to copy value'>var(--dark-grey-00)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-fg-neutral-on-dark);"></div><div class="swatch-label"><span class='label-main'>--dark-fg-neutral-on-dark</span><span class='label-info' title='Click to copy value'>var(--dark-grey-06)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-fg-neutral-on-light);"></div><div class="swatch-label"><span class='label-main'>--dark-fg-neutral-on-light</span><span class='label-info' title='Click to copy value'>var(--dark-grey-00)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-fg-primary);"></div><div class="swatch-label"><span class='label-main'>--dark-fg-primary</span><span class='label-info' title='Click to copy value'>var(--light-teal-03)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-fg-primary-tint);"></div><div class="swatch-label"><span class='label-main'>--dark-fg-primary-tint</span><span class='label-info' title='Click to copy value'>var(--light-teal-03)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-fg-primary-shade);"></div><div class="swatch-label"><span class='label-main'>--dark-fg-primary-shade</span><span class='label-info' title='Click to copy value'>var(--light-teal-04)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-fg-secondary);"></div><div class="swatch-label"><span class='label-main'>--dark-fg-secondary</span><span class='label-info' title='Click to copy value'>var(--light-blue-05)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-fg-secondary-tint);"></div><div class="swatch-label"><span class='label-main'>--dark-fg-secondary-tint</span><span class='label-info' title='Click to copy value'>var(--light-blue-03)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-fg-promotion);"></div><div class="swatch-label"><span class='label-main'>--dark-fg-promotion</span><span class='label-info' title='Click to copy value'>var(--light-gold-03)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-fg-promotion-shade);"></div><div class="swatch-label"><span class='label-main'>--dark-fg-promotion-shade</span><span class='label-info' title='Click to copy value'>var(--light-gold-05)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-fg-success);"></div><div class="swatch-label"><span class='label-main'>--dark-fg-success</span><span class='label-info' title='Click to copy value'>var(--light-green-05)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-fg-success-tint);"></div><div class="swatch-label"><span class='label-main'>--dark-fg-success-tint</span><span class='label-info' title='Click to copy value'>var(--light-green-04)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-fg-warning);"></div><div class="swatch-label"><span class='label-main'>--dark-fg-warning</span><span class='label-info' title='Click to copy value'>var(--light-yellow-03)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-fg-warning-shade);"></div><div class="swatch-label"><span class='label-main'>--dark-fg-warning-shade</span><span class='label-info' title='Click to copy value'>var(--light-yellow-05)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-fg-critical);"></div><div class="swatch-label"><span class='label-main'>--dark-fg-critical</span><span class='label-info' title='Click to copy value'>var(--light-red-04)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-fg-orc);"></div><div class="swatch-label"><span class='label-main'>--dark-fg-orc</span><span class='label-info' title='Click to copy value'>var(--light-orc-01)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-bg-neutral-primary);"></div><div class="swatch-label"><span class='label-main'>--dark-bg-neutral-primary</span><span class='label-info' title='Click to copy value'>var(--dark-grey-00)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-bg-neutral-secondary);"></div><div class="swatch-label"><span class='label-main'>--dark-bg-neutral-secondary</span><span class='label-info' title='Click to copy value'>var(--dark-grey-01)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-bg-neutral-tertiary);"></div><div class="swatch-label"><span class='label-main'>--dark-bg-neutral-tertiary</span><span class='label-info' title='Click to copy value'>var(--dark-grey-02)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-bg-feature-flat);"></div><div class="swatch-label"><span class='label-main'>--dark-bg-feature-flat</span><span class='label-info' title='Click to copy value'>var(--dark-blue-01)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-bg-primary-subtle);"></div><div class="swatch-label"><span class='label-main'>--dark-bg-primary-subtle</span><span class='label-info' title='Click to copy value'>var(--dark-teal-01)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-bg-info-subtle);"></div><div class="swatch-label"><span class='label-main'>--dark-bg-info-subtle</span><span class='label-info' title='Click to copy value'>var(--dark-blue-01)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-bg-success-subtle);"></div><div class="swatch-label"><span class='label-main'>--dark-bg-success-subtle</span><span class='label-info' title='Click to copy value'>var(--dark-green-01)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-bg-warning-subtle);"></div><div class="swatch-label"><span class='label-main'>--dark-bg-warning-subtle</span><span class='label-info' title='Click to copy value'>var(--dark-yellow-01)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-bg-critical-subtle);"></div><div class="swatch-label"><span class='label-main'>--dark-bg-critical-subtle</span><span class='label-info' title='Click to copy value'>var(--dark-red-01)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-bg-shadow);"></div><div class="swatch-label"><span class='label-main'>--dark-bg-shadow</span><span class='label-info' title='Click to copy value'>var(--dark-grey-00)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-bg-promotion-subtle);"></div><div class="swatch-label"><span class='label-main'>--dark-bg-promotion-subtle</span><span class='label-info' title='Click to copy value'>var(--dark-gold-01)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-bg-feature-highlight);"></div><div class="swatch-label"><span class='label-main'>--dark-bg-feature-highlight</span><span class='label-info' title='Click to copy value'>var(--dark-jade-05)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-border-main);"></div><div class="swatch-label"><span class='label-main'>--dark-border-main</span><span class='label-info' title='Click to copy value'>var(--dark-grey-03)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-border-active);"></div><div class="swatch-label"><span class='label-main'>--dark-border-active</span><span class='label-info' title='Click to copy value'>var(--light-teal-04)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-border-critical-active);"></div><div class="swatch-label"><span class='label-main'>--dark-border-critical-active</span><span class='label-info' title='Click to copy value'>var(--light-red-04)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-border-info);"></div><div class="swatch-label"><span class='label-main'>--dark-border-info</span><span class='label-info' title='Click to copy value'>var(--light-blue-03)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-border-success);"></div><div class="swatch-label"><span class='label-main'>--dark-border-success</span><span class='label-info' title='Click to copy value'>var(--light-green-03)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-border-warning);"></div><div class="swatch-label"><span class='label-main'>--dark-border-warning</span><span class='label-info' title='Click to copy value'>var(--light-yellow-03)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-border-critical);"></div><div class="swatch-label"><span class='label-main'>--dark-border-critical</span><span class='label-info' title='Click to copy value'>var(--light-red-03)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-border-m1-plus);"></div><div class="swatch-label"><span class='label-main'>--dark-border-m1-plus</span><span class='label-info' title='Click to copy value'>var(--light-gold-03)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-chart-datapoint);"></div><div class="swatch-label"><span class='label-main'>--dark-chart-datapoint</span><span class='label-info' title='Click to copy value'>var(--dark-blue-04)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-chart-datapoint-feature);"></div><div class="swatch-label"><span class='label-main'>--dark-chart-datapoint-feature</span><span class='label-info' title='Click to copy value'>var(--dark-blue-04)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-chart-bg-plot);"></div><div class="swatch-label"><span class='label-main'>--dark-chart-bg-plot</span><span class='label-info' title='Click to copy value'>var(--dark-grey-03)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-chart-datapoint-1);"></div><div class="swatch-label"><span class='label-main'>--dark-chart-datapoint-1</span><span class='label-info' title='Click to copy value'>var(--dark-blue-05)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-chart-datapoint-2);"></div><div class="swatch-label"><span class='label-main'>--dark-chart-datapoint-2</span><span class='label-info' title='Click to copy value'>var(--dark-blue-04)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-chart-datapoint-3);"></div><div class="swatch-label"><span class='label-main'>--dark-chart-datapoint-3</span><span class='label-info' title='Click to copy value'>var(--light-blue-04)</span></div></div><div class="swatch-card dark"><div class="swatch-square" style="background: var(--dark-chart-datapoint-4);"></div><div class="swatch-label"><span class='label-main'>--dark-chart-datapoint-4</span><span class='label-info' title='Click to copy value'>var(--dark-blue-01)</span></div></div>
+		</div>
+	</div>
+	<div class="swatch-section light">
+		<h2>Inter Weights</h2>
+		<table class="weights-table">
+			<thead>
+				<tr><th>Name</th><th>#</th><th>Use Brand</th><th>Use Liquid Codebase</th></tr>
+			</thead>
+			<tbody>
+				<tr><td class="weight-sample" style="font-weight:100;">Thin</td><td>100</td><td class="ind yes"></td><td class="ind no"></td></tr>
+				<tr><td class="weight-sample" style="font-weight:200;">Extra-Light</td><td>200</td><td class="ind yes"></td><td class="ind yes"><span class="note">HXL only</span></td></tr>
+				<tr><td class="weight-sample" style="font-weight:300;">Light</td><td>300</td><td class="ind yes"></td><td class="ind yes"></td></tr>
+				<tr><td class="weight-sample" style="font-weight:400;">Regular</td><td>400</td><td class="ind yes"></td><td class="ind yes"></td></tr>
+				<tr><td class="weight-sample" style="font-weight:500;">Medium</td><td>500</td><td class="ind yes"></td><td class="ind yes"></td></tr>
+				<tr><td class="weight-sample" style="font-weight:600;">Semi-bold</td><td>600</td><td class="ind yes"></td><td class="ind yes"></td></tr>
+				<tr><td class="weight-sample" style="font-weight:700;">Bold</td><td>700</td><td class="ind yes"></td><td class="ind no"></td></tr>
+				<tr><td class="weight-sample" style="font-weight:800;">Extra-bold</td><td>800</td><td class="ind no"></td><td class="ind no"></td></tr>
+				<tr><td class="weight-sample" style="font-weight:900;">Black</td><td>900</td><td class="ind no"></td><td class="ind no"></td></tr>
+			</tbody>
+		</table>
+	</div>
+
+</body>
+</html>
