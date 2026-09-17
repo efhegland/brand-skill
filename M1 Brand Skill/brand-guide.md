@@ -62,7 +62,7 @@ Never position M1 as a budgeting tool, a trading app, or a robo-advisor. Positio
 
 ## Vision: AI Wealth Management
 
-M1 is defining AI Wealth Management. While the rest of the industry races toward gamification and fragmentation, we're engineering the definitive platform for long-term wealth management.
+M1 is defining AI Wealth Management. While the rest of the industry races toward gamification and fragmentation, we're engineering the definitive platform for long-term wealth management. AI wealth management is fiduciary advice, built into the accounts it advises on.
 
 AI Wealth Management from M1 brings wealth management to everyone — not just the ultra-wealthy. By combining intelligent software with an integrated product suite, M1 delivers the unity, expertise, and care once reserved for clients of private banks.
 
@@ -91,7 +91,7 @@ AI Wealth Management from M1 brings wealth management to everyone — not just t
 You are the CEO of your financial life. M1 Advisor is your partner to provide analysis, consideration and guidance. The depth of your involvement is yours to choose — deeply engaged or high-altitude delegation. The platform accommodates both because it's built for partnership, not dependency.
 
 **The Ecosystem**
-Each pillar — Earn, Save, Invest, Spend, Borrow, Protect, Tax, Give — is a capable product in its own right. But the real power is in the connections and the ease and expertise those connections mean for you. The combination creates something none of the parts could deliver alone. Intelligence, customized by your strategy, operates across the whole system.
+Each pillar — Earn, Save, Invest, Spend, Borrow, Protect, Tax, Give — is a capable product in its own right. But the real power is in the connections and the ease and expertise those connections mean for you. The combination creates something none of the parts could deliver alone. M1 Advisor, customized by your strategy, advises across the whole system.
 
 **The Experience**
 
@@ -109,13 +109,13 @@ Each pillar — Earn, Save, Invest, Spend, Borrow, Protect, Tax, Give — is a c
 - *Balance Sheet*: Save (stability foundation), Invest (compounding engine), Borrow (strategic leverage)
 - *Stewardship*: Protect (defensive perimeter), Tax (efficiency layer), Give (impact and legacy)
 
-**Layer III: M1 Advisor** — The strategic layer operating across three domains:
+**Layer III: M1 Advisor** — The strategic layer advising on three domains:
 
 - *Understand* — financial context and literacy
 - *Track* — system of record, raw data into signal
 - *Plan* — strategic roadmap, forward-looking coordination
 
-Intelligence operates vertically (within each pillar) and horizontally (across pillars).
+M1 Advisor advises vertically (within each pillar) and horizontally (across pillars).
 
 ### M1 Advisor Maturity Model
 
@@ -126,6 +126,7 @@ Intelligence operates vertically (within each pillar) and horizontally (across p
 Each stage builds on the previous. M1 Advisor recommends but does not act, preserving the partnership.
 
 **M1 Advisor** is your AI Wealth Management partner — informed by your goals, holdings, and activity on M1. M1 Advisor helps clients learn about financial concepts, gives advice based on their stated goals, and compares their results against their plan in context with market performance.
+Connect accounts securely through Plaid to build your balance sheet, see your whole net worth in one place, and help M1 Advisor see the whole picture.
 
 ---
 
@@ -319,7 +320,7 @@ M1 account holders are **"clients,"** never "customers" or "users." This is true
 ### Punctuation & Style
 
 - **Oxford comma:** Always.
-- **Em-dashes:** No spaces around the punctuation — like this.
+- **Em-dashes:** No spaces around the punctuation — like this. Avoid using em-dashes unless absolutely necessary.
 - **Time zones:** Default to ET (NYSE is in New York).
 - **Style guide:** Follow AP style unless otherwise noted.
 
